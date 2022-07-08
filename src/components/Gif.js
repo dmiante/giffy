@@ -1,11 +1,9 @@
 import React from 'react';
 
-function Gif ({title, id, url}){
+function Gif ({url, title}){
     return (
         <div>
-            <h4>{title}</h4>
-            <small>{id}</small>
-            <img src={url} alt=''/>
+            <img src={url} alt={title}/>
         </div>
           )
 }
