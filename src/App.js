@@ -1,7 +1,8 @@
 import React  from 'react';
 import './App.css';
 import ListOfGifs from './components/ListOfGifs';
-import {Link, Route} from 'wouter'
+import {Link, Route} from 'wouter';
+import SearchBar from './components/SearchBar';
 
 
 function App() {
@@ -10,12 +11,13 @@ function App() {
     <div className="App">
       <section className="App-content">
         <h1>Giffy</h1>
-        <Link to="/gif/thor">THOR</Link>
-        <Link to="/gif/superman">SUPERMAN</Link>
-        <Link to="/gif/pokemon">POKEMON</Link>
+        <SearchBar />
+        <Link to="/gifs/thor">THOR</Link>
+        <Link to="/gifs/superman">SUPERMAN</Link>
+        <Link to="/gifs/pokemon">POKEMON</Link>
         <Route
         component={ListOfGifs} 
-        path="/gif/:keyword" />
+        path="/gifs/:keyword" />
       </section>
     </div>
   );
