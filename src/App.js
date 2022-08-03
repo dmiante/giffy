@@ -1,8 +1,9 @@
 import React  from 'react';
-import './App.css';
-import ListOfGifs from './components/ListOfGifs';
 import {Link, Route} from 'wouter';
-import SearchBar from './components/SearchBar';
+import './App.css';
+import Home from './pages/Home/Home'
+import SearchBar from './pages/SearchResults/SearchResults';
+import Detail from './pages/Detail/Detail'
 
 
 function App() {
@@ -10,14 +11,21 @@ function App() {
   return (
     <div className="App">
       <section className="App-content">
-        <h1>Giffy</h1>
-        <SearchBar />
-        <Link to="/gifs/thor">THOR</Link>
-        <Link to="/gifs/superman">SUPERMAN</Link>
-        <Link to="/gifs/pokemon">POKEMON</Link>
+        <Link to='/'>
+          <h1>Giffy</h1>
+        </Link>
         <Route
-        component={ListOfGifs} 
-        path="/gifs/:keyword" />
+          component={Home}
+          path='/'
+        />
+        <Route
+          component={SearchBar} 
+          path="/search/:keyword" 
+        />
+        <Route
+          component={Detail}
+          path='gif/:id'
+        />
       </section>
     </div>
   );

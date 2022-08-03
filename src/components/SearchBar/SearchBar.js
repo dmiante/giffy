@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import {useLocation} from 'wouter';
+import React, {useState} from 'react';
+import {useLocation} from 'wouter'
+
 
 function SearchBar (){
-
     const [keyword, setKeyword] = useState("");
     const [_, pushLocation] = useLocation()
 
@@ -15,22 +15,21 @@ function SearchBar (){
     function handleSubmit(e){
       e.preventDefault();
       //navegar a otra ruta
-      pushLocation(`/gifs/${keyword}`)
+      pushLocation(`/search/${keyword}`)
       console.log(keyword);
     }
 
     return (
-        <div>
-          <form onSubmit={handleSubmit}>
-            <input 
+        <form onSubmit={handleSubmit}>
+        <input
             type="text" 
             placeholder="🎁 Search Gif..."
             value={keyword}
-            onChange={handleChange}/>
-            <button>Search</button>
-          </form>
-        </div>
-          )
+            onChange={handleChange}
+        />
+        <button>Search</button>
+      </form>
+    )
 }
 
 export default SearchBar
