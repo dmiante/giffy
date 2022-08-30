@@ -4,7 +4,7 @@ import {useLocation} from 'wouter'
 
 function SearchBar (){
     const [keyword, setKeyword] = useState("");
-    const [_, pushLocation] = useLocation()
+    const [, pushLocation] = useLocation()
 
     function handleChange(e) {
         const newValue = e.target.value;
@@ -16,19 +16,20 @@ function SearchBar (){
       e.preventDefault();
       //navegar a otra ruta
       pushLocation(`/search/${keyword}`)
+      setKeyword('');
       console.log(keyword);
     }
 
     return (
         <form onSubmit={handleSubmit}>
-        <input
-            type="text" 
-            placeholder="🎁 Search Gif..."
-            value={keyword}
-            onChange={handleChange}
-        />
-        <button>Search</button>
-      </form>
+          <input
+              type="text" 
+              placeholder="🎁 Search Gif..."
+              value={keyword}
+              onChange={handleChange}
+          />
+          <button>Search</button>
+        </form>
     )
 }
 

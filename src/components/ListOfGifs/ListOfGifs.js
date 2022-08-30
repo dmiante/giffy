@@ -1,9 +1,10 @@
 import React from 'react';
 import Gif from '../Gif/Gif';
+import './ListOfGifs.css'
 
 function ListOfGifs ({gifs}){
 
-    return <div>
+    return <div className='ListOfGifs'>
         {
         gifs.map(({ id, title, url }) =>
         <Gif 

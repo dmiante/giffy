@@ -1,0 +1,9 @@
+.ListOfGifs {
+    column-count: 2;
+    column-gap: .5em;
+}
+
+.ListOfGifs-item {
+    display: inline-block;
+    width: 100%;
+}

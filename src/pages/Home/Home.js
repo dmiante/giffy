@@ -1,16 +1,19 @@
 import React from 'react'
 import {Link} from 'wouter';
-import SearchBar from '../../components/SearchBar/SearchBar'
+import ListOfGifs from '../../components/ListOfGifs/ListOfGifs';
+import {useGifs} from '../../hooks/useGifs'
 
+  const POPULAR_GIFS = ['Thor', 'Avengers', 'The beatles', 'Superman', 'Harry Potter']
 
 function Home(){
 
-  const POPULAR_GIFS = ['Thor', 'Avengers', 'The beatles', 'Superman', 'Harry Potter']
+  const {gifs} = useGifs()
 
 
 return (
     <div>
-      <SearchBar />
+      <h3>Last search:</h3>
+       <ListOfGifs gifs={gifs}/>
       <h3>Trending Gifs</h3>
       <ul>
         {POPULAR_GIFS.map(popularGifs => (
