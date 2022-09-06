@@ -12,7 +12,7 @@ function Home(){
 
 return (
     <div>
-      <h3>Last search:</h3>
+      <h3>Last search</h3>
        <ListOfGifs gifs={gifs}/>
       <h3>Trending Gifs</h3>
       <ul>
