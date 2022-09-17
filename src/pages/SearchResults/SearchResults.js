@@ -12,7 +12,10 @@ function SearchResults ({ params }){
           {loading ?
           <Spinner />
           :
+          <>
+            <h3>{decodeURI(keyword)}</h3>
             <ListOfGifs gifs={gifs}/>
+          </>
           }
         </>
 }

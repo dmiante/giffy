@@ -1,9 +1,8 @@
 import React from 'react'
-import {Link} from 'wouter';
 import ListOfGifs from '../../components/ListOfGifs/ListOfGifs';
 import {useGifs} from '../../hooks/useGifs'
+import TrendingSearches from '../../components/TrendingSearches/TrendingSearches';
 
-  const POPULAR_GIFS = ['Thor', 'Avengers', 'The beatles', 'Superman', 'Harry Potter']
 
 function Home(){
 
@@ -11,17 +10,16 @@ function Home(){
 
 
 return (
-    <div>
-      <h3>Last search</h3>
-       <ListOfGifs gifs={gifs}/>
-      <h3>Trending Gifs</h3>
-      <ul>
-        {POPULAR_GIFS.map(popularGifs => (
-          <li key={popularGifs}>
-            <Link to={`/search/${popularGifs}`}>Gifs de {popularGifs}</Link>
-        </li>
-        ))}
-      </ul>
+    <div className="App-home">
+      <div className='App-lastSearch'>
+        <h3 className='App-title'>
+          Last Search
+        </h3>
+        <ListOfGifs gifs={gifs}/>
+      </div>
+      <div className='App-category'>
+       <TrendingSearches />
+      </div>
     </div>
 )
 

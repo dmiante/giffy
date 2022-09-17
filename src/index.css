@@ -12,9 +12,7 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Manrope', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -26,7 +24,7 @@ code {
 
 
 a {
-  color: #09f;
+  color: #5CB8E4;
   font-size: 32px;
   text-decoration: none;
 }
@@ -35,4 +33,9 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  font-size: 10em;
+  margin: 10px;
 }

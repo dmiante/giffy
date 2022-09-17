@@ -1,0 +1,26 @@
+input[type="text"] {
+  border: none;
+  font: inherit;
+  outline: none;
+  padding: 1em 1em;
+  margin: 20px 0 20px 0;
+  border-radius: 10px 0 0 10px;
+}
+
+button {
+  background: #5CB8E4;
+  color: #fff;
+  border: 0;
+  padding: 1em 1em;
+  margin: 20px 0 20px 0;
+  font: inherit;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+}
+
+form {
+    display: flex;
+    margin: 0 auto 30px;
+    justify-content: center;
+}
