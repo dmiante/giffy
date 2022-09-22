@@ -29,12 +29,13 @@
 
 .App-home {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   align-items: flex-start;
 }
 
 .App-lastSearch {
   flex-shrink: 2;
+  width: 100%;
 }
 
 .App-category {
