@@ -1,7 +1,7 @@
 import React from 'react'
 import ListOfGifs from '../../components/ListOfGifs/ListOfGifs';
 import {useGifs} from '../../hooks/useGifs'
-import TrendingSearches from '../../components/TrendingSearches/TrendingSearches';
+import TrendingSearches from '../../components/TrendingSearches/TrendingSearch'; 
 
 
 function Home(){

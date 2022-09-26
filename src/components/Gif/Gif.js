@@ -5,12 +5,14 @@ import './Gif.css'
 function Gif ({url, title, id}){
     return (
         <div className='Gif'>
-            <Link to={`gif/${id}`} className='Gif-link'>
+            <Link to={`/${id}`} className='Gif-link'>
                 <h4>{title}</h4>
-                <img src={url} alt={title}/>
+                <img loading='lazy'src={url} alt={title}/>
             </Link>
         </div>
           )
 }
 
-export default Gif
+export default React.memo(Gif, (prevProps, nextProps) => {
+    return prevProps.id === nextProps.id
+})

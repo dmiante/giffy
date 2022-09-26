@@ -9,10 +9,10 @@ import debounce from 'just-debounce-it';
 function SearchResults ({ params }){
   
   const {keyword} = params
-  const {loading, gifs, setPage} = useGifs({keyword})
-  const externalRef = useRef()
+  const {loading, gifs, setPage} = useGifs({ keyword })
+  const visorRef = useRef()
   const {isNearScreen} = useNearScreen({
-    externalRef: loading ? null : externalRef,
+    externalRef: !loading && visorRef,
     once: false
   })
   
@@ -35,7 +35,7 @@ function SearchResults ({ params }){
               {decodeURI(keyword)}
             </h3>
             <ListOfGifs gifs={gifs}/>
-            <div id='visor' ref={externalRef}></div>
+            <div id='visor' ref={visorRef}></div>
           </>
         }
         </>

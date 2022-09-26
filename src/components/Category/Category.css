@@ -25,8 +25,7 @@
 
 @media screen and (min-width: 640px) {
     .cat-list {
-      display: inline-block;
-      
+      display: list-item;      
     }
   
     .cat-list li::before {

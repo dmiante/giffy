@@ -5,7 +5,7 @@ import './SearchBar.css'
 
 function SearchBar (){
     const [keyword, setKeyword] = useState("");
-    const [, pushLocation] = useLocation()
+    const [path, pushLocation] = useLocation()
 
     function handleChange(e) {
         const newValue = e.target.value;
@@ -17,7 +17,8 @@ function SearchBar (){
       e.preventDefault();
       //navegar a otra ruta
       pushLocation(`/search/${keyword}`)
-      setKeyword('');
+      //setKeyword('');
+      console.log(path);
       console.log(keyword);
     }
 
