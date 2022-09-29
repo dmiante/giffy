@@ -1,7 +1,8 @@
 import React from 'react'
 import ListOfGifs from '../../components/ListOfGifs/ListOfGifs';
 import {useGifs} from '../../hooks/useGifs'
-import TrendingSearches from '../../components/TrendingSearches/TrendingSearch'; 
+import TrendingSearches from '../../components/TrendingSearches/TrendingSearch';
+import {Helmet} from 'react-helmet' 
 
 
 function Home(){
@@ -10,6 +11,10 @@ function Home(){
 
 
 return (
+  <>
+    <Helmet>
+      <title>Home | Giffy</title>
+    </Helmet>
     <div className="App-home">
       <div className='App-lastSearch'>
         <h3 className='App-title'>
@@ -21,6 +26,7 @@ return (
        <TrendingSearches />
       </div>
     </div>
+  </>
 )
 
 }
