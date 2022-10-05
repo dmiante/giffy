@@ -33,6 +33,13 @@
   align-items: flex-start;
 }
 
+.App-wrapper {
+	width: 100%;
+	max-width: 90rem;
+	margin: 0 auto;
+	padding: 0 0.5em;
+}
+
 .App-lastSearch {
   flex-shrink: 2;
   width: 100%;

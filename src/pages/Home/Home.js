@@ -15,15 +15,17 @@ return (
     <Helmet>
       <title>Home | Giffy</title>
     </Helmet>
-    <div className="App-home">
-      <div className='App-lastSearch'>
-        <h3 className='App-title'>
-          Last Search
-        </h3>
-        <ListOfGifs gifs={gifs}/>
-      </div>
-      <div className='App-category'>
-       <TrendingSearches />
+    <div className='App-wrapper'>
+      <div className="App-home">
+        <div className='App-lastSearch'>
+          <h3 className='App-title'>
+            Last Search
+          </h3>
+          <ListOfGifs gifs={gifs}/>
+        </div>
+        <div className='App-category'>
+        <TrendingSearches />
+        </div>
       </div>
     </div>
   </>

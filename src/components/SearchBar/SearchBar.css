@@ -1,26 +1,71 @@
-input[type="text"] {
-  border: none;
-  font: inherit;
-  outline: none;
-  padding: 1em 1em;
-  margin: 20px 0 20px 0;
-  border-radius: 10px 0 0 10px;
+form {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
 }
 
 button {
   background: #5CB8E4;
-  color: #fff;
   border: 0;
+  color: #fff;
   padding: 1em 1em;
-  margin: 20px 0 20px 0;
   font: inherit;
   outline: none;
   cursor: pointer;
   border-radius: 0 10px 10px 0;
 }
 
-form {
-    display: flex;
-    margin: 0 auto 30px;
-    justify-content: center;
+input[type="text"] {
+  font: inherit;
+  padding: 1em 1em;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  outline: none;
 }
+
+.op_rating{
+  position:relative;
+  border:1px solid #d9d9d9;
+  overflow: hidden;
+  min-width: 100px;
+}
+
+.op_rating select {
+  background-color: #fafafa;
+  border: none;
+  font-size: 14px;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  appearance: none;
+  font: inherit;
+  text-align: center;
+}
+
+select:focus, select:active {
+  outline: none;
+}
+
+.op_rating::after {
+  content: '<>';
+  font: 17px "Consolas", monospace;
+  color: #333;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 5px;
+  /*Adjust for position however you want*/
+  
+  top: 22px;
+  padding: 0 0 2px;
+  border-bottom: 1px solid #999;
+  /*left line */
+  
+  position: absolute;
+  pointer-events: none;
+}
+

@@ -10,8 +10,8 @@ import { Helmet } from 'react-helmet';
 
 function SearchResults ({ params }){
   
-  const {keyword} = params
-  const {loading, gifs, setPage} = useGifs({ keyword })
+  const {keyword, rating = 'g'} = params
+  const {loading, gifs, setPage} = useGifs({ keyword, rating })
   const visorRef = useRef()
   const {isNearScreen} = useNearScreen({
     externalRef: !loading && visorRef,
@@ -37,7 +37,7 @@ function SearchResults ({ params }){
           :
           <>
             <Helmet>
-              <title>{title}</title>
+              <title>{decodeURI(title)}</title>
               <meta name='description' content={title}></meta>
             </Helmet>
             <h3 className='App-title'>
