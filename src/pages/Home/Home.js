@@ -1,5 +1,5 @@
 import React from 'react'
-import ListOfGifs from '../../components/ListOfGifs/ListOfGifs';
+import ListOfGifs from '../../components/ListOfGifs/ListOfGifs.js';
 import {useGifs} from '../../hooks/useGifs'
 import TrendingSearches from '../../components/TrendingSearches/TrendingSearch';
 import {Helmet} from 'react-helmet' 

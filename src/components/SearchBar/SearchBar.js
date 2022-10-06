@@ -19,7 +19,7 @@ function SearchBar ({initialKeyword = '', initialRating = 'g'}){
     function handleSubmit(e){
       e.preventDefault();
       //navegar a otra ruta
-      pushLocation(`/search/${keyword}/${rating}`)
+      if(keyword !== '') pushLocation(`/search/${keyword}/${rating}`)
       //setKeyword('');
       console.log(path);
       console.log(keyword);
