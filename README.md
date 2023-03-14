@@ -1,7 +1,5 @@
 <div align="center">
-<p>
-<h3><b>Giffy App</b></h3>
-</p>
+<h1>GIFFY APP</h1>
 </div>
 
 ## Packages 📦
