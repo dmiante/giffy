@@ -6,7 +6,7 @@ import useForm from './hook';
 const RATINGS = ['g', 'pg', 'pg-13', 'r']
 
 function SearchBar ({initialKeyword = '', initialRating = 'g'}){
-  const {keyword, rating, times, updateKeyword, updateRating} = useForm({
+  const {keyword, rating, updateKeyword, updateRating} = useForm({
     initialKeyword,
     initialRating
   })
@@ -46,7 +46,6 @@ function SearchBar ({initialKeyword = '', initialRating = 'g'}){
             </select>
           </div>
           <button>Search</button>
-          <small>{times}</small>
         </form>
     )
 }

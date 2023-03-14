@@ -8,8 +8,7 @@ const ACTIONS = {
   const ACTIONS_REDUCERS = {
     [ACTIONS.UPDATE_KEYWORD]: (state, action) => ({
       ...state,
-      keyword: action.payload,
-      times: state.times + 1
+      keyword: action.payload
     }),
     [ACTIONS.UPDATE_RATING]: (state, action) => ({
       ...state,
